@@ -8,6 +8,8 @@ import { FeedbackForm } from "@/components/ui/FeedbackForm";
 import { BookmarkManager } from "@/components/ui/BookmarkManager";
 import { HabitTracker } from "@/components/ui/HabitTracker";
 import { StockMaster } from "@/components/ui/StockMaster";
+import { AgendaPro } from "@/components/ui/AgendaPro";
+import { NexusCRM } from "@/components/ui/NexusCRM";
 
 export const router = createBrowserRouter([
   {
@@ -44,5 +46,15 @@ export const router = createBrowserRouter([
     path: "/stock-master",
     element: <StockMaster />,
     children: [{ index: true, element: <StockMaster /> }],
+  },
+   {
+    path: "/appointments",
+    element: <AgendaPro />,
+    children: [{ index: true, element: <AgendaPro /> }],
+  },
+  {
+    path: "/leads",
+    element: <NexusCRM />,
+    children: [{ index: true, element: <NexusCRM /> }],
   },
 ]);

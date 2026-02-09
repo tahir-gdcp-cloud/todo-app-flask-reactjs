@@ -16,6 +16,8 @@ from flaskr.routes.feedback_routes import blp as feedback_routes
 from flaskr.routes.bookmark_routes import blp as bookmark_routes
 from flaskr.routes.habit_routes import blp as habit_routes
 from flaskr.routes.product_routes import blp as product_routes
+from flaskr.routes.appointment_routes import blp as appointment_routes
+from flaskr.routes.lead_routes import blp as lead_routes
 
 def create_app(test_config=None):
     app = Flask(__name__)
@@ -42,5 +44,7 @@ def create_app(test_config=None):
     api.register_blueprint(bookmark_routes, url_prefix="/api/v1")
     api.register_blueprint(habit_routes, url_prefix="/api/v1")
     api.register_blueprint(product_routes, url_prefix="/api/v1")
+    api.register_blueprint(appointment_routes, url_prefix="/api/v1")
+    api.register_blueprint(lead_routes, url_prefix="/api/v1")
 
     return app
